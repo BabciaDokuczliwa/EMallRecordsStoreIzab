@@ -91,7 +91,12 @@ function AlbumsCard() {
               <p className="name">{album.name}</p>
               <p>{album.artist.name}</p>
               <p className="price">{album.price}$</p>
-              <button onClick={() => dispatch(addItem(album))}>Want it!</button>
+              <button
+                className="album-btn"
+                onClick={() => dispatch(addItem(album))}
+              >
+                Want it!
+              </button>
             </div>
           </li>
         ))}

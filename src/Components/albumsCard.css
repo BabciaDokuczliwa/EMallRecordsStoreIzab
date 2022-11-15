@@ -42,7 +42,7 @@ align-items: center;
 justify-content: space-evenly;
 text-align: center;
 }
-button{
+.album-btn{
     background-color: rgb(50, 106, 53);
     color: white;
     border-radius: 5px;
