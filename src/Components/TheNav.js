@@ -36,7 +36,10 @@ function TheNav() {
           <MdOutlineLogin />
           Login
         </Link>
-        <a className="menu-item" href="https://music-record-finder.netlify.app">
+        <a
+          className="menu-item"
+          href="https://main--music-record-finder.netlify.app/"
+        >
           <BsMusicPlayer />
           Music
         </a>
