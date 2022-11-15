@@ -8,7 +8,11 @@ import { MdOutlineLogin } from "react-icons/md";
 import { MdOutlineRestaurant } from "react-icons/md";
 import { BsMusicPlayer } from "react-icons/bs";
 import cart from "../images/cart.png";
+import { useSelector } from "react-redux";
 function TheNav() {
+  const state = useSelector((state) => state);
+
+  const sum = state.reduce((n, { price }) => n + price, 0);
   return (
     <div className="navigate">
       <div className="imgWrap">
@@ -16,7 +20,7 @@ function TheNav() {
         <img src={logo} alt="logo" height="60" />
 
         <div className="icon">
-          <img src={cart} alt="logo" height="32" />
+          {sum}$<img src={cart} alt="logo" height="32" />
         </div>
       </div>
       <Menu>
@@ -36,10 +40,11 @@ function TheNav() {
           <BsMusicPlayer />
           Music
         </Link>
-        <Link id="food" className="menu-item" to="/food">
+
+        <a className="menu-item" href="https://emallrestaurant.netlify.app/">
           <MdOutlineRestaurant />
           Food
-        </Link>
+        </a>
       </Menu>
     </div>
   );

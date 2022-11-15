@@ -6,11 +6,14 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import "./albumsCard.css";
+import { useDispatch } from "react-redux";
+import { addItem } from "../actions";
 
 function AlbumsCard() {
   const [data, setData] = useState([]);
   const [inputText, setInputText] = useState("");
   const [sort, setSort] = useState("");
+  const dispatch = useDispatch();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -88,7 +91,7 @@ function AlbumsCard() {
               <p className="name">{album.name}</p>
               <p>{album.artist.name}</p>
               <p className="price">{album.price}$</p>
-              <button>Want it!</button>
+              <button onClick={() => dispatch(addItem(album))}>Want it!</button>
             </div>
           </li>
         ))}
