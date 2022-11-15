@@ -36,11 +36,10 @@ function TheNav() {
           <MdOutlineLogin />
           Login
         </Link>
-        <Link id="music" className="menu-item" to="/music">
+        <a className="menu-item" href="https://music-record-finder.netlify.app">
           <BsMusicPlayer />
           Music
-        </Link>
-
+        </a>
         <a className="menu-item" href="https://emallrestaurant.netlify.app/">
           <MdOutlineRestaurant />
           Food
