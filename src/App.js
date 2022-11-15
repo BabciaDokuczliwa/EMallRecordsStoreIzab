@@ -5,7 +5,7 @@ import HomePage from "./Components/HomePage";
 import ErrorPage from "./Components/ErrorPage";
 import LoginPage from "./Components/LoginPage";
 import TheCart from "./Components/TheCart";
-import { Footer } from "./Components/Footer";
+import Footer from "./Components/Footer";
 function App() {
   return (
     <div className="App">
